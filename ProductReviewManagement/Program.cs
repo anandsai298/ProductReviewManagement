@@ -39,7 +39,7 @@ class program
         bool flag = true;
         while (flag)
         {
-            Console.WriteLine("1.RetrieveTopRecords\n2.\n3.");
+            Console.WriteLine("1.RetrieveTopRecords\n2.RetrieveRecordsWRT_RatingAndUserID\n3.RetrieveCountOfReviewPresent");
             Console.WriteLine("Select option");
             int option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -48,8 +48,10 @@ class program
                     productOperations.RetrieveTopRecords(list);
                     break;
                 case 2:
+                    productOperations.RetrieveRecordsWRT_RatingAndUserID(list);
                     break;
                 case 3:
+                    productOperations.RetrieveCountOfReviewPresent(list);
                     break;
             }
         }
