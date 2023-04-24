@@ -1,5 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Collections.Generic;
+
 namespace ProductReviewManagement;
 class program
 {
@@ -33,5 +35,23 @@ class program
         list.Add(new ProductDetails { ProductID = 24, UserID = 12, Rating = 4, Review = "Good", IsLikeFields = true });
         list.Add(new ProductDetails { ProductID = 25, UserID = 11, Rating = 5, Review = "Good", IsLikeFields = true });
         Console.WriteLine(list.Count);
+        ProductOperations productOperations = new ProductOperations();
+        bool flag = true;
+        while (flag)
+        {
+            Console.WriteLine("1.RetrieveTopRecords\n2.\n3.");
+            Console.WriteLine("Select option");
+            int option = Convert.ToInt32(Console.ReadLine());
+            switch (option)
+            {
+                case 1:
+                    productOperations.RetrieveTopRecords(list);
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+            }
+        }
     }
 }
